@@ -101,3 +101,31 @@ body {
         max-width: 310px;
     }
 }
+
+
+
+@media (max-width: 250px) {
+    .title {
+        font-size: 25px;
+        letter-spacing: -1.5px;
+    }
+
+    .logo {
+        width: 15px;
+    }
+
+    .description {
+        margin-top: 1.5px;
+        font-size: 5.5px;
+    }
+
+    .connection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vh;
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 155px;
+    }
+}
