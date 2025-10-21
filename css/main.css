@@ -367,6 +367,15 @@ body {
     .prods-wrapper img {
         height: 25px;
     }
+
+    #presave {
+        position: absolute;
+        display: none;
+        transition: 0.5s;
+        top: 75%;
+        left: 50%;
+        translate: -50% -50%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -429,5 +438,14 @@ body {
 
     .links-wrapper img {
         width: 16px;
+    }
+
+    #presave {
+        position: absolute;
+        display: none;
+        transition: 0.5s;
+        top: 75%;
+        left: 50%;
+        translate: -50% -50%;
     }
 }
