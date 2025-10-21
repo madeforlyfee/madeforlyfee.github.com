@@ -17,16 +17,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problems.com</title>
-    <link rel="stylesheet" href="css/connection.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/x-icon" href="img/icon.png">
 </head>
 <body>
-    <section class="connection">
-        <div class="container">
-            <img class="logo" src="img/no-wifi.svg" alt="No server connection">
+    <header class="header" id="header">
+        <div class="container" id="container">
             <h1 class="title">Problems<span>.com</span></h1>
+            <div class="search">
+                <div class="search-bar-wrapper">
+                    <input type="text" class="search-bar" id="inputField" placeholder="Введите запрос">
+                </div>
+                <button id="checkButton" class="search-button"><img src="img/loupe.svg" alt="search"></button>
+            </div>
         </div>
-        <p class="description">with server connection</p>
-    </section>
+        <div class="presave" id="presave">
+            <div class="release">
+                <img src="img/cover.jpg" alt="Cover" class="cover">
+                <div class="release-wrapper">
+                    <h1>Problems.com</h1>
+                    <p>Madeforlyfe</p>
+                    <a href="https://band.link/mflproblems" target="_blank">Presave</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="nothing">Ничего не найдено</p>
+        </div>
+    </header>
+    <footer class="footer" id="footer">
+        <div class="footer-wrapper" id="footer-wrapper">
+
+            <div class="credits">
+
+                <div class="links-wrapper">
+                    <a href="https://t.me/luhforlife" target="_blank"><img src="img/telegram.svg" alt="Telegram"></a>
+                    <a href="https://www.tiktok.com/@made4lyfe" target="_blank"><img src="img/tiktok.svg" alt="TikTok"></a>
+                    <a href="https://www.instagram.com/madeforlyfe" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a>
+                    <a href="https://vk.com/madeforlyfe" target="_blank"><img src="img/vkontakte.svg" alt="VKontakte"></a>
+                    <a href="https://soundcloud.com/madeforlyfe" target="_blank"><img src="img/soundcloud.svg" alt="SoundCloud"></a>
+                </div>
+            
+                <p class="rights">Все броуки защищены, 2025</p>
+
+                <div class="prods-wrapper">
+                    <a href="https://t.me/kuwabaroff" target="_blank"><img src="img/kuwabaroff.png" alt="kuwabaroff prod."></a>
+                    <div class="rectangle"></div>
+                    <a href="https://band.link/madeforlyfee" target="_blank"><img src="img/mfl.jpg" alt="Madeforlyfe"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        document.getElementById("checkButton").addEventListener("click", function() {
+        const inputValue = document.getElementById("inputField").value.trim();
+        const secretDiv = document.getElementById("presave");
+        const nothing = document.getElementById("nothing");
+
+        if (inputValue === "Madeforlyfe") {
+            secretDiv.style.display = "inline-block";
+            nothing.style.display = "none";
+        } else {
+            secretDiv.style.display = "none";
+            nothing.style.display = "block";
+        }
+        });
+    </script>
 </body>
 </html>
