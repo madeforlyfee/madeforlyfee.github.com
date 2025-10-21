@@ -372,6 +372,7 @@ body {
 @media (max-width: 500px) {
 
     .header {
+        height: 90vh;
         max-width: 300px;
     }
 
@@ -387,7 +388,7 @@ body {
 
     .search-bar-wrapper {
         border: 1px solid #D9D9D9;
-        width: 300px;
+        width: 310px;
         height: 25px;
         padding: 10px;
     }
