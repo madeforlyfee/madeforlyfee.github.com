@@ -21,6 +21,7 @@
     <link rel="icon" type="image/x-icon" href="img/icon.png">
 </head>
 <body>
+
     <header class="header" id="header">
         <div class="container" id="container">
             <h1 class="title">Problems<span>.com</span></h1>
@@ -45,11 +46,10 @@
             <p id="nothing">Ничего не найдено</p>
         </div>
     </header>
+
     <footer class="footer" id="footer">
         <div class="footer-wrapper" id="footer-wrapper">
-
             <div class="credits">
-
                 <div class="links-wrapper">
                     <a href="https://t.me/luhforlife" target="_blank"><img src="img/telegram.svg" alt="Telegram"></a>
                     <a href="https://www.tiktok.com/@made4lyfe" target="_blank"><img src="img/tiktok.svg" alt="TikTok"></a>
@@ -57,26 +57,23 @@
                     <a href="https://vk.com/madeforlyfe" target="_blank"><img src="img/vkontakte.svg" alt="VKontakte"></a>
                     <a href="https://soundcloud.com/madeforlyfe" target="_blank"><img src="img/soundcloud.svg" alt="SoundCloud"></a>
                 </div>
-            
                 <p class="rights">Все броуки защищены, 2025</p>
-
                 <div class="prods-wrapper">
                     <a href="https://t.me/kuwabaroff" target="_blank"><img src="img/kuwabaroff.png" alt="kuwabaroff prod."></a>
                     <div class="rectangle"></div>
                     <a href="https://band.link/madeforlyfee" target="_blank"><img src="img/mfl.jpg" alt="Madeforlyfe"></a>
                 </div>
-
             </div>
-
         </div>
     </footer>
+
     <script>
         document.getElementById("checkButton").addEventListener("click", function() {
         const inputValue = document.getElementById("inputField").value.trim();
         const secretDiv = document.getElementById("presave");
         const nothing = document.getElementById("nothing");
 
-        if (inputValue === "Madeforlyfe") {
+        if (inputValue === "Madeforlyfe" || "madeforlyfe" || "MADEFORLYFE" || "mfl" || "MFL") {
             secretDiv.style.display = "inline-block";
             nothing.style.display = "none";
         } else {
