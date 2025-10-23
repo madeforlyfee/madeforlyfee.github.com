@@ -450,6 +450,10 @@ body {
 
 @media (max-width: 500px) {
 
+    .container {
+        padding: 0 20px;
+    }
+
     .title {
         font-size: 35px;
     }
@@ -494,7 +498,11 @@ body {
     }
 
     .search-bar-wrapper {
-        width: 250px;
+        width: 200px;
+    }
+
+    .search-bar {
+        font-size: 16px;
     }
 
     .release img {
