@@ -22,18 +22,14 @@
 </head>
 <body>
 
-    <section class="timer" id="timer">
-        <p id="demo" class="clock"></p>
-    </section>
-
     <header class="header" id="header">
         <div class="container" id="container">
             <h1 class="title">Problems<span>.com</span></h1>
             <div class="search">
                 <div class="search-bar-wrapper">
-                    <input type="text" class="search-bar" id="inputField" placeholder="Введите запрос">
+                    <input type="text" class="search-bar" id="textInput" placeholder="Введите Madeforlyfe">
                 </div>
-                <button id="checkButton" class="search-button"><img src="img/loupe.svg" alt="search"></button>
+                <button id="openButton" class="search-button"><img src="img/loupe.svg" alt="search"></button>
             </div>
         </div>
         <div class="presave" id="presave">
@@ -72,38 +68,25 @@
     </footer>
 
     <script>
-        document.getElementById("checkButton").addEventListener("click", function() {
-        const inputValue = document.getElementById("inputField").value.trim();
-        const secretDiv = document.getElementById("presave");
-        const nothing = document.getElementById("nothing");
 
-        if (inputValue === "Madeforlyfe") {
-            secretDiv.style.display = "inline-block";
-            nothing.style.display = "none";
-        } else {
-            secretDiv.style.display = "none";
-            nothing.style.display = "block";
-        }
+        document.getElementById('openButton').addEventListener('click', function() {
+            const inputText = document.getElementById('textInput').value;
+            const nothing = document.getElementById("nothing");
+            
+            if (inputText === 'Madeforlyfe') {
+                nothing.style.display = "none";
+                window.location.href = 'search.html';
+            } else {
+                nothing.style.display = "block";
+            }
         });
 
-        var countDownDate = new Date("Oct 24, 2025 00:00:00").getTime();
-        var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
+        document.getElementById('textInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('openButton').click();
+            }
+        });
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("demo").innerHTML = hours + " : "
-        + minutes + " : " + seconds;
-
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-        }, 1000);
     </script>
 </body>
 </html>
